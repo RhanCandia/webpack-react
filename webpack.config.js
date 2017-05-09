@@ -1,7 +1,8 @@
 const path = require('path');
 const webpack = require('webpack');
 const htmlWebpackPlugin = require('html-webpack-plugin');
-const compressionWebpackPlugin = require("compression-webpack-plugin");;
+const compressionWebpackPlugin = require("compression-webpack-plugin");
+const copyWebpackPlugin = require('copy-webpack-plugin');
 
 let config = {
   entry: "./src/index.js",
@@ -55,7 +56,11 @@ let config = {
 }
 
 if (process.env.PRODUCTION) {
-  config.devtool = "source-map";
+  config.devtool = "cheap-source-map";
+  config.plugins.push(new copyWebpackPlugin([
+    { from: 'public' },
+    { ignore: [ 'index.html' ] }
+  ]));
 } else {
   config.plugins.push(
     new webpack.HotModuleReplacementPlugin()
