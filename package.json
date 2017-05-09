@@ -3,6 +3,10 @@
   "version": "1.0.0",
   "main": "index.js",
   "license": "MIT",
+  "dependencies": {
+    "react": "^15.5.4",
+    "react-dom": "^15.5.4"
+  },
   "devDependencies": {
     "babel-core": "^6.24.1",
     "babel-loader": "^7.0.0",
@@ -17,9 +21,5 @@
     "start": "webpack-dev-server --port 3000 --open --config ./webpack.development.config.js --hot --inline --colors",
     "serve-dist": "cd dist && python -m SimpleHTTPServer 3000",
     "build": "webpack --config ./webpack.production.config.js --progress --colors"
-  },
-  "dependencies": {
-    "react": "^15.5.4",
-    "react-dom": "^15.5.4"
   }
 }
