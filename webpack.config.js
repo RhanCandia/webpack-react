@@ -1,6 +1,7 @@
 const path = require('path');
 const webpack = require('webpack');
 const htmlWebpackPlugin = require('html-webpack-plugin');
+const compressionWebpackPlugin = require("compression-webpack-plugin");;
 
 let config = {
   entry: "./src/index.js",
@@ -34,6 +35,7 @@ let config = {
   },
   devtool: "eval-source-map",
   plugins: [
+    new compressionWebpackPlugin(),
     new htmlWebpackPlugin({
       template: './src/index.html',
       filename: 'index.html',
@@ -41,19 +43,19 @@ let config = {
     }),
     new webpack.DefinePlugin({
       'process.env.NODE_ENV': JSON.stringify((process.env.PRODUCTION) ? 'production' : 'development')
+    }),
+    new webpack.optimize.UglifyJsPlugin({
+      compress: {
+        warnings: false,
+        drop_console: false,
+      },
+      sourceMap: true
     })
   ]
 }
 
 if (process.env.PRODUCTION) {
   config.devtool = "source-map";
-  config.plugins.push(new webpack.optimize.UglifyJsPlugin({
-    compress: {
-      warnings: false,
-      drop_console: false,
-    },
-    sourceMap: true
-  }));
 } else {
   config.plugins.push(
     new webpack.HotModuleReplacementPlugin()
