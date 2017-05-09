@@ -10,13 +10,9 @@ const htmlWebpackPlugin = new HtmlWebpackPlugin({
 
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const copyWebpackPlugin = new CopyWebpackPlugin([
-  {
-    from: './public'
-  }
+  { from: './public' }
 ], {
-  ignore: [
-    'index.html'
-  ]
+  ignore: [ 'index.html' ]
 });
 
 module.exports = {
