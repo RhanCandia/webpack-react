@@ -60,6 +60,4 @@ if (process.env.PRODUCTION) {
   );
 }
 
-console.log(config.plugins);
-
 module.exports = config;
