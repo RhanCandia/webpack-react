@@ -14,12 +14,13 @@
     "babel-preset-react": "^6.24.1",
     "copy-webpack-plugin": "^4.0.1",
     "html-webpack-plugin": "^2.28.0",
+    "http-server": "^0.10.0",
     "webpack": "^2.5.1",
     "webpack-dev-server": "^2.4.5"
   },
   "scripts": {
-    "start": "webpack-dev-server --config ./webpack.config.js --open",
-    "serve-dist": "cd dist && python -m SimpleHTTPServer 3000",
-    "build": "webpack --config ./webpack.deployment.config.js --progress --colors"
+    "start": "webpack-dev-server",
+    "build": "set PRODUCTION=true && webpack --config ./webpack.config.js --progress --colors",
+    "serve-build": "http-server ./dist/ -p 3001"
   }
 }
