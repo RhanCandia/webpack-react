@@ -18,8 +18,8 @@
     "webpack-dev-server": "^2.4.5"
   },
   "scripts": {
-    "start": "webpack-dev-server --port 3000 --open --config ./webpack.development.config.js --hot --inline --colors",
+    "start": "webpack-dev-server --config ./webpack.config.js --open",
     "serve-dist": "cd dist && python -m SimpleHTTPServer 3000",
-    "build": "webpack --config ./webpack.production.config.js --progress --colors"
+    "build": "webpack --config ./webpack.deployment.config.js --progress --colors"
   }
 }
