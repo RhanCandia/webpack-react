@@ -4,7 +4,6 @@
 
  * Minimal
  * Clean
- * I don't know what else to say
 
 ###### Stuff used to make this:
 
