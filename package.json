@@ -21,6 +21,6 @@
   "scripts": {
     "start": "webpack-dev-server",
     "build": "set PRODUCTION=true && webpack --config ./webpack.config.js --progress --colors",
-    "serve-build": "http-server ./dist/ -p 3001"
+    "serve-build": "http-server ./dist/ -p 3001 -o"
   }
 }
