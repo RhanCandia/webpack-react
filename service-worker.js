@@ -1,4 +1,4 @@
-var CACHE_NAME = 'webpack-react';
+var CACHE_NAME = 'app-cache-v1';
 var urlsToCache = [
   './',
   './static/js/main.bundle.js'
