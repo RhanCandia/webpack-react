@@ -1,7 +1,7 @@
 var CACHE_NAME = 'webpack-react';
 var urlsToCache = [
   './',
-  './static/js/bundle.js'
+  './static/js/main.bundle.js'
 ];
 self.addEventListener('install', function(event) {
   event.waitUntil(
