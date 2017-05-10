@@ -1,7 +1,7 @@
 var CACHE_NAME = 'my-pwa-cache-v1';
 var urlsToCache = [
-  '/',
-  '/static/js/bundle.js'
+  '',
+  'static/js/bundle.js'
 ];
 self.addEventListener('install', function(event) {
   event.waitUntil(
