@@ -10,7 +10,8 @@ module.exports = new WebpackConfig()
   .merge({
     output: {
       path: path.resolve(__dirname, "../dist"),
-      filename: "static/js/[name]-[hash].js"
+      filename: "static/js/bundle.js",
+      publicPath: "./"
     },
     devtool: 'cheap-source-map',
     plugins: [
