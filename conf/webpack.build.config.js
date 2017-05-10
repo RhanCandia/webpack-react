@@ -17,7 +17,7 @@ module.exports = new WebpackConfig()
       new WebpackCleanupPlugin(),
       new CompressionWebpackPlugin(),
       new CopyWebpackPlugin([
-        { from: 'public' }
+        { from: path.resolve(__dirname, '../static') }
       ]),
       new webpack.optimize.UglifyJsPlugin({
         minimize: true,

@@ -7,7 +7,7 @@ config = new WebpackConfig()
   .merge({
     devtool: "eval-source-map",
     devServer: {
-      contentBase: path.resolve(__dirname, "../public"),
+      contentBase: path.resolve(__dirname, "../static"),
       port: 3000,
       compress: true,
       historyApiFallback: true,
