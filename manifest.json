@@ -4,8 +4,8 @@
   "theme_color": "#000000",
   "background_color": "#329fe4",
   "display": "standalone",
-  "Scope": "/",
-  "start_url": "/",
+  "Scope": "/webpack-react/",
+  "start_url": "/webpack-react/",
   "icons": [
     {
       "src": "images/icons/icon-72x72.png",
