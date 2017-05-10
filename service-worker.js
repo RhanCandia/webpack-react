@@ -1,7 +1,9 @@
-var CACHE_NAME = 'my-pwa-cache-v1';
+const path = require('path');
+
+var CACHE_NAME = 'webpack-react';
 var urlsToCache = [
-  '',
-  'static/js/bundle.js'
+  path.resolve(__dirname, "/"),
+  path.resolve(__dirname, "/static/js/bundle.js")
 ];
 self.addEventListener('install', function(event) {
   event.waitUntil(
