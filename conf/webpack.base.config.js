@@ -3,7 +3,9 @@ const webpack = require('webpack');
 const htmlWebpackPlugin = require('html-webpack-plugin');
 
 let config = {
-  entry: "./src/index.js",
+  entry: {
+    main: "./src/index.js"
+  },
   module: {
     rules: [
       {
