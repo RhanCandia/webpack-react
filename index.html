@@ -9,5 +9,15 @@
 </head>
 <body>
 <div id="root">Loading ...</div>
-<script type="text/javascript" src="static/js/main-966e6811ae5978f40ca1.js"></script></body>
+<script>
+  if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.register('service-worker.js')
+      .then(function(registration) {
+        console.log('Service worker registered, scope is:', registration.scope);
+      }).catch(function(error) {
+      console.log('Service worker registration failed, error:', error);
+    });
+  }
+</script>
+<script type="text/javascript" src="static/js/bundle.js"></script></body>
 </html>
